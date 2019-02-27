@@ -4,12 +4,13 @@ from tweepy.streaming import StreamListener
 import tweepy
 import csv
 import sys
+import time
 
 #consumer key, consumer secret, access token, access secret.
-ckey="86o1IyP33QYGCketuZqmHai1R"
-csecret="7JYxRSOQJv9oYbFIk09CRmBX3jOazAPwCzHA9cw6Z460PHOIjW"
-atoken="1094363214043889665-xuGnzSDEDsL4CL84TtU7MRRysx4p2u"
-asecret="WU4t80lKaEfBkzM1JGdjaB67VGe7fsnY5mOC8mEiUB0lz"
+ckey="hpbARu5lJlozST82JEdXYcaS7"
+csecret="JpfbXATmdNPz6yIhFwmVU1mGU28QTICCuYkfqGibb25HV4x4VK"
+atoken="1094363214043889665-UohVaHgV89P7OtSgUlWq6QJ6q30Yu1"
+asecret="mz0RhOmUHN2ISAFcE3j0bOwZVxoAy5x5Ccn8RAiqYrRRI"
 
 auth = OAuthHandler(ckey, csecret)
 auth.set_access_token(atoken, asecret)
@@ -28,4 +29,5 @@ for tweet in alltweets:
  outtweets = [tweet.id_str, tweet.created_at, tweet.text.encode("utf-8")]
  writer.writerow(outtweets)
  print(outtweets)
+ time.sleep(2)
 f.close()
