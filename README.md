@@ -6,7 +6,7 @@
 * Drov Subramanian
 * Arjun Talpallikar
 
-## Project Objectives
+## Project Objectives:
 
 * Collect social media opinions on actors
 * Analyze opinions
